@@ -1,0 +1,67 @@
+#
+#
+#
+Sigma:
+epsilon
+key
+invitation
+chefhat
+spoon
+sword
+crown
+ancient_coin
+spell_book
+magic_wand
+End
+#
+#
+#
+#
+States:
+EH, S
+DR
+K
+A
+T
+L
+P
+TR
+WS
+SE, F
+End
+#
+#
+#
+#
+#
+#
+Transitions:
+EH, A, key - A, epsilon, epsilon
+EH, DR, epsilon - DR, epsilon, epsilon
+DR, EH, invitation - EH, epsilon, epsilon
+DR, K, chefhat - K, epsilon, epsilon
+DR, T, sword - T, epsilon, epsilon
+K, DR, epsilon - DR, epsilon, epsilon
+K, P, spoon - P, epsilon, epsilon
+A, T, sword - T, epsilon, epsilon
+A, EH, invitation - EH, epsilon, epsilon
+A, TR, crown - TR, epsilon, epsilon
+T, A, key - A, epsilon, epsilon
+T, DR, epsilon - DR, epsilon, epsilon
+T, L, ancient_coin - L, epsilon, epsilon
+T, WS, spell_book - WS, epsilon, epsilon
+L, T, sword - T, epsilon, epsilon
+L, SE, magic_wand - SE, epsilon, epsilon
+P, K, chefhat - K, epsilon, epsilon
+TR, A, key - A, epsilon, epsilon
+TR, WS, spell_book - WS, epsilon, epsilon
+WS, TR, crown - TR, epsilon, epsilon
+WS, T, sword - T, epsilon, epsilon
+WS, SE, magic_wand - SE, epsilon, epsilon
+SE, SE, epsilon - SE, epsilon, epsilon
+End
+#
+#
+#
+#
+#
